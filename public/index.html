@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- defer для того чтобы успел загрузиться Dom, иначе может getElementById() вернуть null -->
+</head>
+<body>
+    <main class="calculator">
+        <h1>Калькулятор</h1>
+        <p>Введите два числа и выберите операцию</p>
+
+        <form id="calcForm">
+            <input type="number" id="a" step="any" placeholder="Первое число" required>
+
+            <select id="operation">
+                <option value="+">Сложение (+)</option>
+                <option value="-">Вычитание (-)</option>
+                <option value="*">Умножение (×)</option>
+                <option value="/">Деление (÷)</option>
+            </select>
+
+            <input type="number" id="b" step="any" placeholder="Второе число" required>
+
+            <button type="submit" id="calculateBtn"> Вычислить </button>
+        </form>
+
+        <div class="result" id="result" aria-live="polite"> Результат появится здесь </div>
+    </main>
+</body>
+</html>
